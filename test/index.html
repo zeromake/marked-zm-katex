@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>marked-test</title>
+    <link rel="stylesheet" type="text/css" href="./markdown.css">
+    <style type="text/css">
+        .content{
+            font-size: 0;
+            width:auto;
+            min-height: 300px;
+            height:90vh;
+            border:1px solid #ccc;
+        }
+        .editor-input, .markdown-body{
+            box-sizing: border-box;
+            font-size: 14px;
+            display: inline-block;
+            width: 50%;
+            height: 100%;
+            padding: 10px;
+        }
+		.editor-input{
+            margin: 0;
+            resize: none;
+            outline: none;
+            border: none;
+            border-right: 1px solid #ddd;
+            background-color: transparent;
+            color: #333;
+            font-family: PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,\\微软雅黑,STHeitiSC-Light,simsun,\\宋体,WenQuanYi Zen Hei,WenQuanYi Micro Hei,sans-serif;
+		}
+        .markdown-body{
+            overflow: auto;
+            font-family: "Source Sans Pro",sans-serif;
+            line-height: 26.1px;
+            outline-color: rgb(63, 63, 63);
+            outline-style: none;
+            outline-width: 0px;
+            text-align: justif;
+        }
+        .toc-level-2{
+            margin-left: 14px;
+        }
+        .toc-level-3{
+            margin-left: 28px;
+        }
+        .toc-level-4{
+            margin-left: 42px;
+        }
+        .toc-level-5{
+            margin-left: 56px;
+        }
+        .toc-level-6{
+            margin-left: 70px;
+        }
+        code{
+            color: #c7254e;
+        }
+    </style>
+</head>
+<body>
+<div class="content"><textarea id="myEditor" spellcheck="false" class="editor-input"></textarea><div id="myView" class="markdown-body"></div>
+</div>
+<script src="./dist/dist.js"></script>
+</body>
+</html>

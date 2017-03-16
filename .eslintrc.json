@@ -1,0 +1,21 @@
+{
+    "extends": "airbnb-base",
+    "rules": {
+        "no-param-reassign": "off",
+        "indent": ["error", 4],
+        "prefer-rest-params": "off",
+        "semi": "off",
+        "no-restricted-syntax": "off",
+        "no-plusplus": "off",
+        "no-loop-func": "off",
+        "prefer-template": "off",
+        "no-underscore-dangle": "off",
+        "func-call-spacing": "off",
+        "no-spaced-func": "off",
+        "no-unexpected-multiline": "off",
+        "no-cond-assign": "off",
+        "no-bitwise": "off",
+        "no-script-url": "off",
+        "comma-dangle": "off"
+    }
+}
