@@ -19,9 +19,10 @@ marked(texStr)
 ```
 
 ## test
+``` shell
 $git clone https://github.com/zeromake/marked-zm-katex
 $cd marked-zm-katex
 $npm i
 $npm run test
-
+```
 open test/index.html on Browser
