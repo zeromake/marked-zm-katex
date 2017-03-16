@@ -3,7 +3,17 @@
   "version": "0.0.1",
   "description": "marked katex plugin",
   "main": "index.js",
+  "homepage": "https://github.com/zeromake/marked-zm-katex",
   "repository": "https://github.com/zeromake/marked-zm-katex.git",
+  "bugs": {
+    "url": "https://github.com/zeromake/marked-zm-katex/issues"
+  },
+  "tags": [
+    "marked-zm",
+    "marked-zm-plugin",
+    "marked",
+    "latex"
+  ],
   "author": "zeromake <fly-zero@hotmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -22,12 +32,19 @@
     "style-loader": "^0.14.1",
     "url-loader": "^0.5.8"
   },
+  "files": [
+    "src",
+    "index.js",
+    "LICENSE",
+    "README.md",
+    "webpack.config.js"
+  ],
   "dependencies": {
     "katex": "^0.7.1"
   },
   "scripts": {
     "lint": "eslint",
-    "test": "webpack --progress --colors --watch --config test/webpack.config.js",
+    "test": "webpack --progress --colors --config test/webpack.config.js",
     "dev": "cross-env NODE_ENV=development webpack --progress --colors --watch --config webpack.config.js",
     "build": "cross-env NODE_ENV=production webpack --progress --colors --config webpack.config.js"
   }

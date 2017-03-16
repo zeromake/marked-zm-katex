@@ -1,5 +1,5 @@
 const katex = require('katex')
-require('katex/dist/katex.css')
+// require('katex/dist/katex.css')
 
 module.exports = function katexPlugin() {
     const blockReg = /^ *\${2}(.*?)\${2} *(\n+|$)/
