@@ -7,14 +7,14 @@ module.exports = function katexPlugin() {
     const type = 'katex'
     return {
         type,
-        block(state) {
+        block(state, env) {
             const cap = blockReg.exec(state.src)
             if (cap) {
                 const offsetLen = cap[0].length
                 const offsetStart = state.offset
                 const offsetEnd = offsetStart + offsetLen
                 state.src = state.src.substring(offsetLen)
-                state.tokens.push({
+                env.tokens.push({
                     type,
                     text: cap[1],
                     start: offsetStart,
@@ -25,16 +25,21 @@ module.exports = function katexPlugin() {
             }
             return false
         },
-        parser() {
-            return this.renderer.paragraph(katex.renderToString(this.token.text))
+        parser(env) {
+            return env.renderer.paragraph(env.renderer[type](env.token.text))
         },
-        inline(state) {
+        inline(state, env) {
             const cap = inlineReg.exec(state.src)
             if (cap) {
                 const offsetLen = cap[0].length
                 state.src = state.src.substring(offsetLen)
-                state.out += katex.renderToString(cap[1])
+                state.out += env.renderer[type](cap[1])
+                return true
             }
+            return false
+        },
+        renderer(code) {
+            return katex.renderToString(code)
         }
     }
 }
